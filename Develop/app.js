@@ -139,5 +139,40 @@ function managerPrompt() {
 
         const manager = new Manager(name, id, email, officeNumber);
         teamArray.push(manager);
-    }
-}
+   });
+};
+
+// function for engineer prompts
+function engineerPrompt() {
+    inquirer.prompt(engineerQuest).then((response) => {
+
+        let name = response.engineerName;
+        let id = response.engineerId;
+        let email = response.engineerEmail;
+        let github = response.github;
+
+        const engineer = new Engineer (name, id, email, github);
+
+        teamArray.push(engineer);
+        
+        next();
+        
+    });
+};
+
+//function for intern prompts
+function interPrompt() {
+    inquirer.prompt(internQuest).then((response) => {
+        
+        let name = response.internName;
+        let id = response.internId;
+        let email = response.internEmail;
+        let school = response.school;
+        
+        const intern = new Intern (name, id, email, school);
+
+        teamArray.push(intern);
+
+        next();
+    });
+};
