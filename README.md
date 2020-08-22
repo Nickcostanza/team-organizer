@@ -1,1 +1,1 @@
-# team-organizer
+# team-profile-organizer
