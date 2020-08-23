@@ -99,7 +99,7 @@ const internQuest = [
 const newEmployee = [
     {
         type: 'list',
-        name: 'newEmployee',
+        name: 'nextEmployee',
         mesage: 'Select the Team Member you would like to add next? If done, select finished!',
         choices: ['Engineer', 'Intern', 'Finished']
     }
@@ -108,26 +108,26 @@ const newEmployee = [
 // Starting function to begin with Manager
 function init() {
     managerPrompt();
-};
+}
 
 //Function that prompts user to select next type of employee
 function next() {
     inquirer.prompt(newEmployee).then((response) => {
 
         console.log(response);
-        switch (response.newEmployee) {
+        switch (response.nextEmployee) {
             case 'Engineer':
-                engineerQuest();
+                engineerPrompt();
                 break;
             case 'Intern':
-                internQuest();
+                internPrompt();
                 break;
-            case 'done';
+            case 'done':
             console.log('Building Your Team!')
             makeTeam();
         }
-    });
-};
+    })
+}
 //function for manager questions
 function managerPrompt() {
     inquirer.prompt(managerQuest).then((response) => {
@@ -139,8 +139,13 @@ function managerPrompt() {
 
         const manager = new Manager(name, id, email, officeNumber);
         teamArray.push(manager);
-   });
-};
+
+        console.log(teamArray)
+
+        next();
+            
+   })
+}
 
 // function for engineer prompts
 function engineerPrompt() {
@@ -154,14 +159,15 @@ function engineerPrompt() {
         const engineer = new Engineer (name, id, email, github);
 
         teamArray.push(engineer);
+        console.log(teamArray);
         
         next();
         
-    });
-};
+    })
+}
 
 //function for intern prompts
-function interPrompt() {
+function internPrompt() {
     inquirer.prompt(internQuest).then((response) => {
         
         let name = response.internName;
@@ -172,7 +178,18 @@ function interPrompt() {
         const intern = new Intern (name, id, email, school);
 
         teamArray.push(intern);
+        console.log(teamArray);
 
         next();
-    });
-};
+    })
+}
+
+function makeTeam() {
+    fs.writeFile(outputPath, render(teamArray), function(err) {
+     if (err) {
+         return console.log(err)
+     } 
+    })
+}
+
+init();

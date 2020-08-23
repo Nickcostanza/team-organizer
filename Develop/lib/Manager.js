@@ -5,15 +5,15 @@ const Employee = require('./Employee');
         constructor(name, id, email, officeNumber) {
             super(name, id, email);
             this.officeNumber = officeNumber;
-        };
+        }
 
         getOfficeNumber() {
-            return this.officeNumber
-        };
+            return this.officeNumber;
+        }
 
         getRole() {
             return 'Manager';
-        };
-    };
+        }
+    }
 
-    module.exports = Manager
+     module.exports = Manager
