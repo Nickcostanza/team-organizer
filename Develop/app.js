@@ -21,25 +21,25 @@ const managerQuest = [
     {
         type: 'input',
         name: 'managerName',
-        message: 'Please enter your name'
+        message: 'Please enter Managers name'
     },
 
     {
         type: 'input',
         name: 'managerId',
-        message: 'Please enter your ID number'
+        message: 'Please enter Managers ID number'
     },
 
     {
         type: 'input',
         name: 'managerEmail',
-        message: 'Please enter your Email'
+        message: 'Please enter managers Email'
     },
 
     {
         type: 'input',
         name: 'officeNumber',
-        message: 'Pleaase emter your office number?'
+        message: 'Pleaase emter managers office number?'
     }
 ]
 
