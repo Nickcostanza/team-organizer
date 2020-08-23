@@ -122,7 +122,7 @@ function next() {
             case 'Intern':
                 internPrompt();
                 break;
-            case 'done':
+            case 'Finished':
             console.log('Building Your Team!')
             makeTeam();
         }
