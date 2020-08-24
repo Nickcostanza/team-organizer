@@ -154,7 +154,7 @@ function engineerPrompt() {
         let name = response.engineerName;
         let id = response.engineerId;
         let email = response.engineerEmail;
-        let github = response.github;
+        let github = response.engineerGithub;
 
         const engineer = new Engineer (name, id, email, github);
 
@@ -173,7 +173,7 @@ function internPrompt() {
         let name = response.internName;
         let id = response.internId;
         let email = response.internEmail;
-        let school = response.school;
+        let school = response.internSchool;
         
         const intern = new Intern (name, id, email, school);
 
