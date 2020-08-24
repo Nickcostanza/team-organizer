@@ -20,10 +20,13 @@ In order to use this application, be sure to have node installed. After clone, o
 
 
 ## Video Recording
-To see an example of how application works, [Click Here]()!
+To see an example of how application works, [Click Here](https://youtu.be/QWAWL_jedM4)!
 
 ## Github Repository
-[GithubRepoHere]()!
+[GithubRepoHere](https://github.com/Nickcostanza/team-organizer)!
 
-## License
+## Hompage
+![Homepage](Develop\assets\Homepage.png)
+
+# License
 ![License](https://img.shields.io/badge/License-MIT-blue.svg "License Badge")
